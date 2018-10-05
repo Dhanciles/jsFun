@@ -33,7 +33,17 @@ const scope = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // First we declare a global variable called 'personA' and assign it to the string of 'Paul'
+    // Next, we declare a global variable called 'personB' and assign it to the string of 'Ben'
+    // Next, we declare a global variable called 'personC' and assign it to the string of 'Tom'
+    // Then we declare a function called 'changePerson'
+    // Next, on line 23 'changePerson' is invoked, and popped onto the call stack
+    // Now we are inside change person and once inside the function, we will hoist the function declaration 'beautifyPerson' into local memory
+    // Now as we are executing 'changePerson', once execution begins we are thrown into a conditional statement, which is checking if 'personA' strictly equals a string of 'Paul'. Since it does we are now assigning 'person' to the string of 'Cardi B'. There is now keyword of var, let, or const being used in this assigment, so we will now be 'person' will now leak out of the block scope to the parent function scope. Now 'person' can be accessed through out our function. 
+    // Next on line 10, 'beautifyPerson' is now invoked. 
+    // Now 'beutifyPerson' is popped onto the local execution stack for 'changePerson', and it is now popped onto our global call stack
+    
+
   },
 
   exerciseB() {

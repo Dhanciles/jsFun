@@ -16,11 +16,16 @@ const context = {
 
 
     // What is the value of `this` when we call ship.fly()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'instance of SpaceProbe';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // 'this' will reference our newly created object, 'ship'. 
+    //  because the function 'fly' is being invoked using the 'new' operator. 
+    // we are assigning a new instance of our 'SpaceProbe' object to 'ship' using the new operator. 
+    // Doing this will give 'ship' access to all properties and methods of 
+    // 'SpaceProbe'
+    // 'this' in function code invoked using the 'new' operator refers to the newly created object
   },
 
   exerciseB() {
@@ -30,11 +35,14 @@ const context = {
     }
     
     // What is the value of `this` when we call fn()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'context';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // 'this' will refer to the global window object which is 'context' when 'fn' is invoked.
+    // the context of 'this' is set when an ES5 function is invoked.
+    // we are not 'binding' the context of 'this' to our function, so the context of this will be lost 
+    //by default 'this' refers to the global window object, in this case is 'context'. 
   },
 
   exerciseC() {
@@ -49,11 +57,12 @@ const context = {
     el.addEventListener("click", car.getInfo);
 
     // What is the value of `this` when a user clicks on our element and car.getInfo() is triggered?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'car';
     return result;
 
     // Annotation: 
-    // Write your annotation here as a comment
+    // 'this' will refer to the our object 'car', because we are executing a function as a method on an object. 
+    // the context of 'this' will now be set to our object 'ship due to this rule
   },
 
   exerciseD() {
@@ -70,11 +79,11 @@ const context = {
 
 
     // What is the value of `this` when we call dog.getBreed()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'dog';
     return result;
 
     // Annotation: 
-    // Write your annotation here as a comment
+    // 'this' will refer to
   },
 
   exerciseE() {
