@@ -488,7 +488,7 @@ const kittyPrompts = {
     //   color: 'orange'
     // },
     // ...etc]
-  };
+  }
 };
 
 
@@ -580,5 +580,6 @@ module.exports = {
   classPrompts,
   modPrompts,
   kittyPrompts,
+  cakePrompts,
   astronomyPrompts
 };
