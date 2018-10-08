@@ -1,4 +1,4 @@
-const constellations = {
+kconst constellations = {
   orion: {
     names: ['Orion', 'The Hunter', 'The Giant', 'The Deer'],
     stars: ['Betelgeuse', 'Rigel', 'Bellatrix', 'Mintaka', 'Alnilam', 'Alnitak', 'Saiph']

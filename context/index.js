@@ -16,16 +16,15 @@ const context = {
 
 
     // What is the value of `this` when we call ship.fly()?
-    const result = 'instance of SpaceProbe';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // 'this' will reference our newly created object, 'ship'. 
-    //  because the function 'fly' is being invoked using the 'new' operator. 
-    // we are assigning a new instance of our 'SpaceProbe' object to 'ship' using the new operator. 
-    // Doing this will give 'ship' access to all properties and methods of 
-    // 'SpaceProbe'
-    // 'this' in function code invoked using the 'new' operator refers to the newly created object
+    // 'this' will reference our 'global window object'
+    // on line 3 we are declaring a variable named 'fly' using the keyword const and we are assigning an es6 arrow function to the variable 'fly' 
+    //since we are creating the function using an arrow function, and in the function on 4 we are logging the value of this to the console
+    //the value of this is set when the function is created, and the function is created in the global scope, so the value of this will be set to the global window object
+    //even though the function is assigned to a key as a method on our class and then we are assigning a new instance of our class, the value of this was set when the function was created
   },
 
   exerciseB() {
@@ -35,13 +34,13 @@ const context = {
     }
     
     // What is the value of `this` when we call fn()?
-    const result = 'context';
+    const result = 'global window object';
     return result;
 
     // Annotation:
     // 'this' will refer to the global window object which is 'context' when 'fn' is invoked.
     // the context of 'this' is set when an ES5 function is invoked.
-    // we are not 'binding' the context of 'this' to our function, so the context of this will be lost 
+    // we are not 'binding' the context of 'this' to our function, so the context of 'this' will be lost 
     //by default 'this' refers to the global window object, in this case is 'context'. 
   },
 
@@ -79,11 +78,14 @@ const context = {
 
 
     // What is the value of `this` when we call dog.getBreed()?
-    const result = 'dog';
+    const result = 'global window object';
     return result;
 
     // Annotation: 
-    // 'this' will refer to
+    // 'this' will refer to the global window object, because we are invoking an es5 function on our object. 
+    // the context of 'this' is set when an es5 function is invoked, and when this function of is invoked the context of this has been lost
+    // we will need to bind the value of 'this' to our object, so the context is not lost when this function is invoked. 
+    
   },
 
   exerciseE() {
@@ -95,11 +97,12 @@ const context = {
 
 
     // What is the value of `this` when we call fn()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation: 
-    // Write your annotation here as a comment
+    // our function 'fn' is created using an es6 arrow function, and due to the this the context of 'this' is set when the function is created. 
+    // so when we call 'fn' we will be returning the value of our 'value' variable that is now tied to our global window object
   },
 
   exerciseF() {
@@ -118,11 +121,14 @@ const context = {
     const storm = new Hero('Ororo', 'weather control', true);
 
     // What is the value of `this` when we call storm.identifyHero()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'instance of Hero';
     return result;
 
     // Annotation: 
-    // Write your annotation here as a comment
+    // 'this' is set to a new instance of Hero
+    // when we use the 'new operator' it will refer to our newly created object
+    // in this case our newly created object is assigned to the variable storm
+    // when this method is invoked as storm.identifyHero(), it will refer to a new instance of our parent class, Hero
   },
 
   exerciseG() {
@@ -146,11 +152,16 @@ const context = {
 
 
     // What is the value of `this` when we call monopoly.restart()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation: 
-    // Write your annotation here as a comment
+    // 'this' will refer to our 'global window object' 
+    // on line 144 we are creating a method for our class Game
+    // the method is created using an es5 function
+    // when the method is invoked, the context of 'this' has been lost
+    // because we have not saved the value of 'this'
+    // when creating a function using es5 syntax the the context is set when the function is invoked, and its value has not been saved. 
   },
 
   exerciseH() {

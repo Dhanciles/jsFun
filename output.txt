@@ -1,0 +1,266 @@
+
+> jsFun@1.0.0 test /Users/PORTILLO/turing/mod2/jsFun
+> ./node_modules/mocha/bin/mocha test/ --reporter dot --require mocha-clean
+
+
+
+  !!,!!!!!!,․!․․!!!!!!!!!!!!!․․․․․!!!!!!!!!!!!!!!
+
+  8 passing (41ms)
+  2 pending
+  37 failing
+
+  1) CONTEXT
+       exerciseA:
+
+      AssertionError: expected 'instance of SpaceProbe' to equal 'global window object'
+      + expected - actual
+
+      -instance of SpaceProbe
+      +global window object
+      
+      at Context.it (test/context-test.js:7:23)
+
+  2) CONTEXT
+       exerciseB:
+
+      AssertionError: expected 'context' to equal 'global window object'
+      + expected - actual
+
+      -context
+      +global window object
+      
+      at Context.it (test/context-test.js:12:23)
+
+  3) CONTEXT
+       exerciseD:
+
+      AssertionError: expected 'dog' to equal 'global window object'
+      + expected - actual
+
+      -dog
+      +global window object
+      
+      at Context.it (test/context-test.js:22:23)
+
+  4) CONTEXT
+       exerciseE:
+
+      AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to equal 'global window object'
+      + expected - actual
+
+      -REPLACE WITH YOUR RESULT HERE
+      +global window object
+      
+      at Context.it (test/context-test.js:27:23)
+
+  5) CONTEXT
+       exerciseF:
+
+      AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to equal 'instance of Hero'
+      + expected - actual
+
+      -REPLACE WITH YOUR RESULT HERE
+      +instance of Hero
+      
+      at Context.it (test/context-test.js:32:23)
+
+  6) CONTEXT
+       exerciseG:
+
+      AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to equal 'global window object'
+      + expected - actual
+
+      -REPLACE WITH YOUR RESULT HERE
+      +global window object
+      
+      at Context.it (test/context-test.js:37:23)
+
+  7) CONTEXT
+       exerciseH:
+
+      AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to equal 'obj'
+      + expected - actual
+
+      -REPLACE WITH YOUR RESULT HERE
+      +obj
+      
+      at Context.it (test/context-test.js:42:23)
+
+  8) CONTEXT
+       exerciseI:
+
+      AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to equal 'poets'
+      + expected - actual
+
+      -REPLACE WITH YOUR RESULT HERE
+      +poets
+      
+      at Context.it (test/context-test.js:47:23)
+
+  9) PROTOTYPES
+       Turing Prompts
+         studentsPerInstructor:
+     ReferenceError: instructor is not defined
+      at instructors.filter.intstructor (prototypes/index.js:42:79)
+      at Array.filter (<anonymous>)
+      at cohorts.reduce (prototypes/index.js:42:39)
+      at Array.reduce (<anonymous>)
+      at Object.studentsPerInstructor (prototypes/index.js:40:28)
+      at Context.it (test/prototype-test.js:16:36)
+
+  10) PROTOTYPES
+       Club Prompts
+         membersBelongingToClubs:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal undefined
+      at Context.it (test/prototype-test.js:35:30)
+
+  11) PROTOTYPES
+       Boss Prompts
+         bossLoyalty:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(3) ]
+      at Context.it (test/prototype-test.js:43:30)
+
+  12) PROTOTYPES
+       Class Prompts
+         feClassrooms:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(4) ]
+      at Context.it (test/prototype-test.js:51:30)
+
+  13) PROTOTYPES
+       Class Prompts
+         totalCapacities:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal { FE: 110, BE: 96 }
+      at Context.it (test/prototype-test.js:56:30)
+
+  14) PROTOTYPES
+       Class Prompts
+         sortByCapacity:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(8) ]
+      at Context.it (test/prototype-test.js:61:30)
+
+  15) PROTOTYPES
+       Mod Prompts
+         studentsPerMod:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(4) ]
+      at Context.it (test/prototype-test.js:70:30)
+
+  16) PROTOTYPES
+       Kitty Prompts
+         orangeKittyNames:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ 'Tiger', 'Snickers' ]
+      at Context.it (test/prototype-test.js:78:30)
+
+  17) PROTOTYPES
+       Kitty Prompts
+         sortByAge:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(4) ]
+      at Context.it (test/prototype-test.js:83:30)
+
+  18) PROTOTYPES
+       Kitty Prompts
+         growUp:
+     AssertionError: expected undefined to deeply equal [ Array(4) ]
+      at Context.it (test/prototype-test.js:88:30)
+
+  19) PROTOTYPES
+       Pie Prompts
+         howManyIngredients:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal { cinnamon: 50, sugar: 100 }
+      at Context.it (test/prototype-test.js:96:30)
+
+  20) PROTOTYPES
+       Astronomy Prompts
+         starsInConstellations:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(2) ]
+      at Context.it (test/prototype-test.js:104:30)
+
+  21) PROTOTYPES
+       Astronomy Prompts
+         starsByColor:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal { Object (blue, white, ...) }
+      at Context.it (test/prototype-test.js:109:30)
+
+  22) PROTOTYPES
+       Astronomy Prompts
+         constellationsStarsExistIn:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(11) ]
+      at Context.it (test/prototype-test.js:114:30)
+
+  23) SCOPE
+       exerciseA:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(4) ]
+      at Context.it (test/scope-test.js:7:28)
+
+  24) SCOPE
+       exerciseB:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(4) ]
+      at Context.it (test/scope-test.js:17:28)
+
+  25) SCOPE
+       exerciseC:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(4) ]
+      at Context.it (test/scope-test.js:27:28)
+
+  26) SCOPE
+       exerciseD:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(4) ]
+      at Context.it (test/scope-test.js:37:28)
+
+  27) SCOPE
+       exerciseE:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(4) ]
+      at Context.it (test/scope-test.js:47:28)
+
+  28) SCOPE
+       exerciseF:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(5) ]
+      at Context.it (test/scope-test.js:57:28)
+
+  29) SCOPE
+       exerciseG:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(4) ]
+      at Context.it (test/scope-test.js:68:28)
+
+  30) SCOPE
+       exerciseH:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(5) ]
+      at Context.it (test/scope-test.js:78:28)
+
+  31) SCOPE
+       exerciseI:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(8) ]
+      at Context.it (test/scope-test.js:89:28)
+
+  32) SCOPE
+       exerciseJ:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(6) ]
+      at Context.it (test/scope-test.js:103:28)
+
+  33) SCOPE
+       exerciseK:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ { A: 7 }, { B: 7 } ]
+      at Context.it (test/scope-test.js:115:28)
+
+  34) SCOPE
+       exerciseL:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ { A: 95 }, { B: 90 }, { C: 90 } ]
+      at Context.it (test/scope-test.js:123:28)
+
+  35) SCOPE
+       exerciseM:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(4) ]
+      at Context.it (test/scope-test.js:132:28)
+
+  36) SCOPE
+       exerciseN:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(6) ]
+      at Context.it (test/scope-test.js:142:28)
+
+  37) SCOPE
+       exerciseO:
+     AssertionError: expected 'REPLACE WITH YOUR RESULT HERE' to deeply equal [ Array(3) ]
+      at Context.it (test/scope-test.js:154:28)
+
+
+

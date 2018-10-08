@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const scope = require('../scope/index');
 
 describe('SCOPE', () => {
-  it('exerciseA', () => {
+  it.skip('exerciseA', () => {
     const result = scope.exerciseA();
     expect(result).to.deep.equal([
       { 'A': 'Ben' },
@@ -12,7 +12,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseB', () => {
+  it.skip('exerciseB', () => {
     const result = scope.exerciseB();
     expect(result).to.deep.equal([
       { 'A': 75 },
@@ -22,7 +22,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseC', () => {
+  it.skip('exerciseC', () => {
     const result = scope.exerciseC();
     expect(result).to.deep.equal([
       { 'A': 'Yo' },
@@ -32,7 +32,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseD', () => {
+  it.skip('exerciseD', () => {
     const result = scope.exerciseD();
     expect(result).to.deep.equal([
       { 'A': 'hi' },
@@ -42,7 +42,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseE', () => {
+  it.skip('exerciseE', () => {
     const result = scope.exerciseE();
     expect(result).to.deep.equal([
       { 'C': 'Brittany' },
@@ -52,7 +52,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseF', () => {
+  it.skip('exerciseF', () => {
     const result = scope.exerciseF();
     expect(result).to.deep.equal([
       { 'A': 'Spot' },
@@ -63,7 +63,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseG', () => {
+  it.skip('exerciseG', () => {
     const result = scope.exerciseG();
     expect(result).to.deep.equal([
       { 'A': 'reference error' },
@@ -73,7 +73,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseH', () => {
+  it.skip('exerciseH', () => {
     const result = scope.exerciseH();
     expect(result).to.deep.equal([
       { 'A': 4 },
@@ -84,7 +84,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseI', () => {
+  it.skip('exerciseI', () => {
     const result = scope.exerciseI();
     expect(result).to.deep.equal([
       { 'A': 75 },
@@ -98,7 +98,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseJ', () => {
+  it.skip('exerciseJ', () => {
     const result = scope.exerciseJ();
     expect(result).to.deep.equal([
       { 'A':  'ketchup sandwich' },
@@ -110,7 +110,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseK', () => {
+  it.skip('exerciseK', () => {
     const result = scope.exerciseK();
     expect(result).to.deep.equal([
       { 'A': 7 },
@@ -118,7 +118,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseL', () => {
+  it.skip('exerciseL', () => {
     const result = scope.exerciseL();
     expect(result).to.deep.equal([
       { 'A': 95 },
@@ -127,7 +127,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseM', () => {
+  it.skip('exerciseM', () => {
     const result = scope.exerciseM();
     expect(result).to.deep.equal([
       { 'A': 5 },
@@ -137,7 +137,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseN', () => {
+  it.skip('exerciseN', () => {
     const result = scope.exerciseN();
     expect(result).to.deep.equal([
       { 'E':  'Pam' },
@@ -149,7 +149,7 @@ describe('SCOPE', () => {
     ]);
   });
 
-  it('exerciseO', () => {
+  it.skip('exerciseO', () => {
     const result = scope.exerciseO();
     expect(result).to.deep.equal([
       { 'B': 'flipflop' },

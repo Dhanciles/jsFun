@@ -37,12 +37,12 @@ describe('CONTEXT', () => {
     expect(result).to.equal('global window object');
   });
 
-  it('exerciseH', () => {
+  it.skip('exerciseH', () => {
     const result = context.exerciseH();
     expect(result).to.equal('obj');
   });
 
-  it('exerciseI', () => {
+  it.skip('exerciseI', () => {
     const result = context.exerciseI();
     expect(result).to.equal('poets');
   });

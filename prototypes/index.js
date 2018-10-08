@@ -39,7 +39,7 @@ const turingPrompts = {
 
     const result = cohorts.reduce((obj, cohort) => {
     let key = `cohort${cohort.cohort}`
-    let instructorCount = instructors.filter(intstructor => instructor.module === cohort.module).length
+    let instructorCount = instructors.filter(instructor => instructor.module === cohort.module).length
     let studentsPerInstructor = cohort.studentCount / instructorCount
     
     obj[key] = studentsPerInstructor
@@ -140,11 +140,15 @@ const modPrompts = {
     //   { mod: 4, studentsPerInstructor: 8 }
     // ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = mods.map(mod => {
+      let count = mod.students / mod.instructors
+      return {mod: mod.mod, studentsPerInstructor: count}
+    });
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // We are given an array and we want to return an array,  where each element is an object where our key value pairs are our mod and mod number, and the amount of students per instructor per mod. 
+    // To do this I will reach for .map(), because this will allow us to return an array of the same length, and allow us to find our students per instructor on each iteration.
   }
 };
 
@@ -175,11 +179,12 @@ const classPrompts = {
     //   { roomLetter: 'G', program: 'FE', capacity: 29 }
     // ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = classrooms.filter(room => room.program === 'FE')
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    //  We are given an array and we want to return an array of all elements where their key of program is assigned to a string of 'FE'. 
+    // To do this I will reach for a .filter(), because it will allow us to return an array with all elements that return true based on our condition
   },
 
   totalCapacities() {
@@ -190,21 +195,32 @@ const classPrompts = {
     //   beCapacity: 96
     // }
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = classrooms.reduce((obj, room) => {
+      if (room.program === 'FE') {
+        obj.feCapacity += room.capacity
+      } else {
+        obj.beCapacity += room.capacity
+      }
+      return obj
+    }, {feCapacity: 0, beCapacity: 0})
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // We are given an array and we want to return an object where our keys are a fe and beCapacity, and their values are the total capacity for all rooms. To do this I will reach for a .reduce(), because of it's flexibility it will allow us to create our object and on each iteration increase our value for our capacities
   },
 
   sortByCapacity() {
     // Return the array of classrooms sorted by their capacity (least capacity to greatest)
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = classrooms.sort((a,b) => {
+      return a.capacity > b.capacity
+    })
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // We are given an array and we want to return an array where our elements are sorted by room capacity. 
+    // But we want to sort our elements from least capacity to the gratest. 
+    // To do this I will reach for a .sort(), because we want to return an array of the same length and organize our array based on the condition we give it 
   }
 };
 
@@ -361,11 +377,15 @@ const piePrompts = {
     //   sugar: 100
     // }
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 
+    // const keys = Object.keys(pies)
+    'Hello'
+    
+    // ;
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // We are given an object and we want to return an object where keys our ingredients and the value is the total ingredients we will need to make our desiredInventoryCount of pies
   }
 };
 
@@ -395,11 +415,24 @@ const clubPrompts = {
     //   ...etc
     // }
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = clubs.reduce((obj, club) => {
+      club.members.forEach(member => {
+        if (!obj[member] || !obj[member].includes(club.club)) {
+          obj[member] = [club.club]
+        } else {
+          obj[member].push(club.club)
+        } 
+        if (!obj[member].includes(club.club)) {
+          obj[member].push(club.club)
+        }
+      })
+      return obj 
+    }, {});
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // We are given an array and we want to return an object, where our keys are the menbers of our clubs, and thier value is an array of the clubs they are members of. 
+    // To do this I will reach for .reduce(), because of it's flexibility and how we can dynamically create our key value pairs on each iteration
   }
 };
 
@@ -429,11 +462,29 @@ const bossPrompts = {
     //   { bossName: 'Scar', sidekickLoyalty: 16 }
     // ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const evilLords = Object.keys(bosses)
+    const result = evilLords.map(boss => {
+      let obj = {}
+      obj.bossName = bosses[boss].name
+      obj.sidekickLoyalty = 0 
+      sidekicks.forEach(sidekick => {
+        if (sidekick.boss === bosses[boss].name) {
+          obj.sidekickLoyalty += sidekick.loyaltyToBoss
+        }
+      })
+      return obj 
+    })
     return result;
 
     // Annotation:
     // Write your annotation here as a comment
+    // const bosses = {boss:{}}
+    // const sidekicks = [{}]
+    // We are given two datasets, one is an object and the other is an array
+    // We want to return an object with two keys
+    //  the first is a key of 'bossName' and it's value is a string with the name of our boss
+    // the second key is 'sidekickLoyalty' and it's value is the total loyalty is the totatal loyalty from all sidekicks of our boss
+    // to do this I will reach a .map() we need to return an array of the same length as our bosses, but to iterate over our sidekicks we will check if our boss name matches the boss of the sidekick we are iterating over and once we do that we will want to return that value to out sidekickLoyalty and increment that value each time we have a match 
   }
 };
 
@@ -458,21 +509,31 @@ const kittyPrompts = {
     // Return an array of just the names of kitties who are orange e.g.
     // ['Tiger', 'Snickers']
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = kitties.reduce((arr, cat) => {
+      if (cat.color === 'orange') {
+        arr.push(cat.name)
+      }
+      return arr
+    }, []);
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // we are given an array and we want to return an array 
+    // the elements in our new array will be the names of our cats that have a color of orange 
+    // to this this I will reach for .reduce() due to it's flexibilty it will allow us to return a single value that only returns the value from our element on each iteration
   },
 
   sortByAge() {
     // Sort the kitties by their age
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = kitties.sort((a, b) => {
+      return a.age > b.age
+    });
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    //we are given an array, and we want to sort our array by the age of the cats in our array. 
+    // to do this I will reach for .sort, this will allow us to sort our cats by age on each iteration
   },
 
   growUp() {
@@ -488,7 +549,12 @@ const kittyPrompts = {
     //   color: 'orange'
     // },
     // ...etc]
-  }
+    const result = kitties.map(cat => {
+      cat.age += 2
+      return cat 
+    })
+    return result; 
+  },
 };
 
 
@@ -528,7 +594,10 @@ const astronomyPrompts = {
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // we are given two data sets, one is an object and the other is an array
+    // const constellations = {{}}
+    // const stars = [{}]
+    //  and we want to return an array with all elements from our 
   },
 
   starsByColor() {
@@ -580,6 +649,5 @@ module.exports = {
   classPrompts,
   modPrompts,
   kittyPrompts,
-  cakePrompts,
   astronomyPrompts
 };
