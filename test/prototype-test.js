@@ -31,8 +31,8 @@ describe('PROTOTYPES', () => {
 
   describe('Club Prompts', () => {
     it('membersBelongingToClubs', () => {
-      const result = clubPrompts.membersBelongingToClubs({ Louisa: [ 'Drama', 'Art' ],Pam: [ 'Drama', 'Chess', 'Newspaper' ],Nathaniel: [ 'Drama', 'Astronomy' ],Leta: [ 'Band', 'Newspaper', 'Astronomy' ],Robbie: [ 'Band', 'Chess', 'FBLA' ],Jhun: [ 'Band', 'Art' ],Will: [ 'Band' ],David: [ 'Chess', 'Newspaper', 'FBLA' ],Brittany: [ 'Chess', 'Newspaper' ],Christie: [ 'Newspaper', 'FBLA' ] });
-      expect(result).to.deep.equal();
+      const result = clubPrompts.membersBelongingToClubs()
+      expect(result).to.deep.equal({ Louisa: [ 'Drama', 'Art' ],Pam: [ 'Drama', 'Chess', 'Newspaper' ],Nathaniel: [ 'Drama', 'Astronomy' ],Leta: [ 'Band', 'Newspaper', 'Astronomy' ],Robbie: [ 'Band', 'Chess', 'FBLA' ],Jhun: [ 'Band', 'Art' ],Will: [ 'Band' ],David: [ 'Chess', 'Newspaper', 'FBLA' ],Brittany: [ 'Chess', 'Newspaper' ],Christie: [ 'Newspaper', 'FBLA' ] });
     });
   });
 
